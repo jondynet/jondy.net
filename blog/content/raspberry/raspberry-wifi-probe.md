@@ -1,37 +1,37 @@
-Title: ��ݮ����wifi̽��
+Title: 树莓派做wifi探针
 Date: 2017-04-12 16:04
 Category: Raspberry
 Tags: wifi raspberry
 Slug: raspberry-wifi-probe
 Authors: zhangdi
-Summary: ʹ����ݮ����wifi̽��ʼ�
+Summary: 使用树莓派做wifi探针笔记
 
-*wifi̽��*ֻ���豸��������������������Ҫ����wifi����̽����豸��mac��ַ���ź�ǿ�ȡ�
-�����˾Ҫ��һ��*wifi̽��*��Ʒ�����������߸��ǵ�Ӧ�á�
+*wifi探针*只需设备开启无线网卡，并不需要连接wifi即可探测出设备的mac地址和信号强度。
+最近公司要做一款*wifi探针*产品用于扩充无线覆盖的应用。
 
-*wifi̽��*�����������ӣ�֮ǰ������ݮ��2���İ����ϲ�usb��������ʵ�ֹ���
-�����ֵ���ݮ��3�����Ӽ�����wifi��ͬʱҲԤ���˺��̿ɺ������ߵ�����
+*wifi探针*本身并不复杂，之前我在树莓派2代的板子上插usb无线网卡实现过，
+新入手的树莓派3代板子集成了wifi，同时也预留了焊盘可焊接天线底座。
 
-����ݮ������*wifi̽��*��Ϊ�˲�Ʒ��������ʾ���㣬���ղ�Ʒ����ֲ��OpenWRTƽ̨�İ����ϡ�
+在树莓派上做*wifi探针*是为了产品开发和演示方便，最终产品会移植到OpenWRT平台的板子上。
 
-��ݮ��3���İ�����������Ĭ���ǲ�֧��monitorģʽ�ģ����ȵô򲹶�֧��monitorģʽ��
+树莓派3代的板载无线网卡默认是不支持monitor模式的，首先得打补丁支持monitor模式。
 
-�����Զ���������
+开机自动挂载驱动
 
-�޸� /etc/rc.local
+修改 /etc/rc.local
 
-exit 0 ǰ����
-������
+exit 0 前增加
+```
 insmod /root/brcmfmac.ko
-������
+```
 
-*wifi̽��*ʵ�ֵĹ��ܣ���ȡ�ܱ��ֻ����豸��mac��ַ���ź�ǿ���ϱ����ƶˣ�
-���ȸ���ճ�����ϵ�N��ʵ��wifi̽���python�ű�����Ч��������ʹ�õ���scapy�����ģ�
-ʵ�ʲ����ź�ǿ���ǲ��Եģ�ʱ���ϵûȥ�о�����ԭ��ʹ����pcap�İ汾���Ի�ȡ����Ҫ�����ݡ�
+*wifi探针*实现的功能：获取周边手机等设备的mac地址和信号强度上报到云端，
+首先复制粘贴网上的N行实现wifi探针的python脚本看看效果，文章使用的是scapy来做的，
+实际测试信号强度是不对的，时间关系没去研究具体原因，使用了pcap的版本可以获取到需要的数据。
 
-�޸Ĵ��ϱ����ܺ�python���룺
+修改带上报功能后python代码：
 
-������
+```python
 #coding:utf-8
 # by zhangdi <h4ck@163.com>
 import os
@@ -112,8 +112,8 @@ try:
 	c.loop(-1, pcapy_packet)
 except SystemError:
 	print clients
-������
+```
 
-�����ڼ䷢��ż��������������������2A�ĵ�Դ������������3̨�ڼ����칫�����ڼ�������������
+测试期间发现偶尔无线网卡死掉，后换了2A的电源后解决，部署了3台在几个办公区用于计算区域人流。
 
-���䣺�����������������Զ��л��ŵ����ں����γɲ�Ʒ��C���԰汾ʱ���ֱ��ŵ�����Ҫ���������ǹ㲥����
+补充：我在这里做了网卡自动切换信道，在后来形成产品的C语言版本时发现变信道不需要，本身就是广播啊。
