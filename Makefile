@@ -12,7 +12,7 @@ PUBLISHCONF=$(BASEDIR)/conf/pelicanconf/publishconf.py
 SSH_HOST=jondy.net
 SSH_PORT=22
 SSH_USER=root
-SSH_TARGET_DIR=/home/www/jondy.net/newblog2
+SSH_TARGET_DIR=/home/www/jondy.net/output
 
 help:
 	@echo 'Makefile for a pelican Web site                                           '
