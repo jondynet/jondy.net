@@ -6,6 +6,7 @@ import os.path
 dirname = lambda x: os.path.dirname(x)
 BASE_DIR = dirname(dirname(dirname(os.path.abspath(__file__))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'blog', 'content')
+print CONTENT_DIR
 
 PLUGINS = ['autostatic', ]
 
