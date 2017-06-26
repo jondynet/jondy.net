@@ -1,7 +1,7 @@
 Title: 阿里云django channels 没有响应的问题
 Date: 2016-10-31 14:04:03
 Category: django
-Tags: ['django channels', 'redis']
+Tags: django channels,redis
 Slug: django-channels-redis-not-responsing
 Authors: zhangdi
 Summary: 阿里云django channels 没有响应的问题

@@ -6,13 +6,15 @@ BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/blog
 OUTPUTDIR=$(BASEDIR)/output
 THEMEDIR=$(BASEDIR)/theme
+BOOKSDIR=$(BASEDIR)/books
 CONFFILE=$(BASEDIR)/conf/pelicanconf/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/conf/pelicanconf/publishconf.py
 
 SSH_HOST=jondy.net
 SSH_PORT=22
 SSH_USER=root
-SSH_TARGET_DIR=/home/www/jondy.net/output
+BLOG_TARGET_DIR=/home/www/jondy.net/output
+BOOKS_TARGET_DIR=/home/www/jondy.net/books
 
 help:
 	@echo 'Makefile for a pelican Web site                                           '
@@ -42,6 +44,7 @@ endif
 
 upload: 
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) -t $(THEMEDIR) $(PELICANOPTS)
-	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) --cvs-exclude
+	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(BLOG_TARGET_DIR) --cvs-exclude
+	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete $(BOOKSDIR)/ $(SSH_USER)@$(SSH_HOST):$(BOOKS_TARGET_DIR) --cvs-exclude
 
 .PHONY: html help clean regenerate serve rsync_upload 
