@@ -1,0 +1,395 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>景点语音介绍页面 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="step4.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    基础工作及准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="get-start.html">
+            
+                <a href="get-start.html">
+            
+                    
+                    需求分析及规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="step1.html">
+            
+                <a href="step1.html">
+            
+                    
+                    基本框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="step2.html">
+            
+                <a href="step2.html">
+            
+                    
+                    添加单页组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="step3.html">
+            
+                <a href="step3.html">
+            
+                    
+                    重新规划单页组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="step4.html">
+            
+                <a href="step4.html">
+            
+                    
+                    图片列表页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="step5.html">
+            
+                <a href="step5.html">
+            
+                    
+                    景点语音介绍页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >景点语音介绍页面</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x666F;&#x70B9;&#x8BED;&#x97F3;&#x4ECB;&#x7ECD;&#x9875;&#x9762;">&#x666F;&#x70B9;&#x8BED;&#x97F3;&#x4ECB;&#x7ECD;&#x9875;&#x9762;</h1>
+<p>&#x5728;&#x666F;&#x70B9;&#x5217;&#x8868;&#x9875;&#x9762;&#x70B9;&#x51FB;&#x76F8;&#x5E94;&#x7684;&#x666F;&#x70B9;&#x5C06;&#x8FDB;&#x5165;&#x666F;&#x70B9;&#x8BED;&#x97F3;&#x4ECB;&#x7ECD;&#x9875;&#x9762;&#xFF0C;
+&#x5E76;&#x81EA;&#x52A8;&#x64AD;&#x653E;&#x666F;&#x70B9;&#x4ECB;&#x7ECD;&#x7684;&#x8BED;&#x97F3;&#x5185;&#x5BB9;&#xFF0C;&#x8FD9;&#x4E2A;&#x9875;&#x9762;&#x5E03;&#x5C40;&#x7C7B;&#x4F3C;&#x97F3;&#x4E50;&#x64AD;&#x653E;&#x5668;&#xFF0C;
+&#x9876;&#x90E8;&#x663E;&#x793A;&#x666F;&#x70B9;&#x7167;&#x7247;&#xFF0C;&#x4E2D;&#x90E8;&#x533A;&#x57DF;&#x663E;&#x793A;&#x666F;&#x533A;&#x4ECB;&#x7ECD;mp3&#x6587;&#x4EF6;&#x7684;&#x64AD;&#x653E;&#x8FDB;&#x5EA6;&#x53CA;&#x64AD;&#x653E;&#x6682;&#x505C;&#x7B49;&#x529F;&#x80FD;&#x6309;&#x94AE;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x627E;&#x4E2A;&#x64AD;&#x653E;mp3&#x7684;vue&#x7EC4;&#x4EF6; vue-howler</p>
+<p><code>npm install vue-howler</code></p>
+<p>&#x5728;<code>src/components</code>&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;<code>audio-player.vue</code>&#x6587;&#x4EF6;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">import</span> VueHowler <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue-howler&apos;</span>
+
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    mixins: [VueHowler]
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Total duration: {{ duration }} seconds<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Progress: {{ (progress * 100) }}%<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;togglePlayback&quot;</span>&gt;</span>{{ playing ? &apos;Pause&apos; : &apos;Play&apos; }}<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;stop&quot;</span>&gt;</span>Stop<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+</code></pre>
+<p>&#x4FEE;&#x6539;webpack&#x7684;&#x6253;&#x5305;&#x914D;&#x7F6E;&#x589E;&#x52A0;&#x5BF9;mp3&#x7B49;&#x6587;&#x4EF6;&#x7684;&#x6253;&#x5305;&#x652F;&#x6301;</p>
+<pre><code class="lang-javascript">{
+    test: <span class="hljs-regexp">/\.(mp3|mp4|webcam|wav)(\?.*)?$/</span>,
+    loader: <span class="hljs-string">&apos;url-loader&apos;</span>,
+    query: {
+      limit: <span class="hljs-number">10000</span>,
+      name: utils.assetsPath(<span class="hljs-string">&apos;medias/[name].[hash:7].[ext]&apos;</span>)
+    }
+},
+</code></pre>
+<p>&#x590D;&#x5236;&#x4E86;&#x9879;&#x76EE;&#x6A21;&#x677F;&#x4E2D;<code>dynamic-route.vue</code>&#x7684;&#x5185;&#x5BB9;,
+&#x8FD9;&#x91CC;&#x8FB9;&#x6709;router&#x4F20;&#x9012;&#x53C2;&#x6570;&#x548C;&#x52A8;&#x6001;&#x5BFC;&#x822A;&#x6761;&#x7684;&#x4F8B;&#x5B50;&#x53EF;&#x4F9B;&#x53C2;&#x8003;&#xFF0C;
+&#x8FD9;&#x91CC;&#x4FEE;&#x6539;&#x5E03;&#x5C40;&#xFF0C;&#x9876;&#x90E8;&#x589E;&#x52A0;&#x56FE;&#x7247;&#xFF0C;&#x4E2D;&#x90E8;&#x4E3A;&#x64AD;&#x653E;&#x5668;&#xFF0C;&#x5E95;&#x90E8;&#x4E3A;&#x6587;&#x5B57;&#x5185;&#x5BB9;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">f7-page</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">f7-navbar</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Dynamic Route&quot;</span> <span class="hljs-attr">back-link</span>=<span class="hljs-string">&quot;Back&quot;</span> <span class="hljs-attr">sliding</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">f7-navbar</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/static/img/tianchi.a9542e3.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">audio-player</span> <span class="hljs-attr">:sources</span>=<span class="hljs-string">&quot;audioSources&quot;</span> <span class="hljs-attr">:loop</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">:autoplay</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">audio-player</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">f7-block</span> <span class="hljs-attr">inner</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Url:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> {{$route.url}}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Path:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> {{$route.path}}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Hash:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> {{$route.hash}}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Params:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;(value, key) in $route.params&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>{{key}}:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> {{value}}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Query:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;(value, key) in $route.query&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>{{key}}:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> {{value}}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Route:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> {{$route.route.path}}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">f7-block</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">f7-block</span> <span class="hljs-attr">inner</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">f7-link</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;$route.view.router.back()&quot;</span>&gt;</span>Go back via Router API<span class="hljs-tag">&lt;/<span class="hljs-name">f7-link</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">f7-block</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">f7-page</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+</code></pre>
+<p>&#x5728;&#x4ECB;&#x7ECD;&#x9875;&#x9762;&#x4E2D;&#x5F15;&#x5165;&#x64AD;&#x653E;&#x5668;&#x7EC4;&#x4EF6;&#x548C;&#x97F3;&#x9891;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">import</span> AudioPlayer <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../audio-player.vue&apos;</span>
+  <span class="hljs-keyword">import</span> mp3_tianchi <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./tianchi.mp3&apos;</span>
+
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    components: {
+        AudioPlayer
+    },
+    data () {
+      <span class="hljs-keyword">return</span> {
+        audioSources: [
+          mp3_tianchi
+        ]
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x6700;&#x7EC8;&#x6548;&#x679C;&#x5982;&#x4E0B;&#x56FE;</p>
+<p><img src="images/step5-1.png" alt="PNG"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="step4.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 图片列表页面">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"景点语音介绍页面","level":"1.7","depth":1,"previous":{"title":"图片列表页面","level":"1.6","depth":1,"path":"step4.md","ref":"step4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"step5.md","mtime":"2017-05-16T08:55:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-12T06:40:56.365Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

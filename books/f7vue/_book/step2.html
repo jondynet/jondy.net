@@ -1,0 +1,340 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>添加单页组件 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="step3.html" />
+    
+    
+    <link rel="prev" href="step1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    基础工作及准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="get-start.html">
+            
+                <a href="get-start.html">
+            
+                    
+                    需求分析及规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="step1.html">
+            
+                <a href="step1.html">
+            
+                    
+                    基本框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="step2.html">
+            
+                <a href="step2.html">
+            
+                    
+                    添加单页组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="step3.html">
+            
+                <a href="step3.html">
+            
+                    
+                    重新规划单页组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="step4.html">
+            
+                <a href="step4.html">
+            
+                    
+                    图片列表页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="step5.html">
+            
+                <a href="step5.html">
+            
+                    
+                    景点语音介绍页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >添加单页组件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6DFB;&#x52A0;&#x5355;&#x9875;&#x7EC4;&#x4EF6;">&#x6DFB;&#x52A0;&#x5355;&#x9875;&#x7EC4;&#x4EF6;</h1>
+<p>&#x5148;&#x4ECE;&#x7B80;&#x5355;&#x7684;&#x505A;&#x8D77;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x505A;<code>&#x514D;&#x8D39;Wi-Fi</code>&#x9875;&#x9762;&#xFF0C;&#x8FD9;&#x4E2A;&#x9875;&#x9762;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E2A;Wi-Fi&#x63A5;&#x5165;&#x7684;&#x6559;&#x7A0B;&#x3002;
+&#x56E0;&#x4E3A;&#x7528;&#x6237;&#x8981;&#x7528;&#x5FAE;&#x4FE1;&#x8BA4;&#x8BC1;&#xFF0C;&#x8FD9;&#x4E00;&#x884C;&#x4E3A;&#x662F;&#x53D1;&#x751F;&#x5728;&#x7528;&#x6237;&#x63A5;&#x5165;Wi-Fi&#x65F6;&#xFF0C;&#x5E76;&#x4E0D;&#x9700;&#x8981;App&#x81EA;&#x52A8;&#x8FDE;Wi-Fi&#xFF0C;
+&#x6211;&#x4EEC;&#x7684;&#x5DE5;&#x4F5C;&#x5C31;&#x7B80;&#x5355;&#x4E86;&#xFF0C;&#x5199;&#x4E2A;&#x5355;&#x9875;&#x7684;&#x56FE;&#x6587;&#x6559;&#x7A0B;&#x5C31;&#x597D;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x5728;&#x9879;&#x76EE;src&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;components&#x6765;&#x5B58;&#x653E;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7EC4;&#x4EF6;&#x3002;</p>
+<p>&#x65B0;&#x5EFA;wifi.vue&#x6587;&#x4EF6;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        &#x514D;&#x8D39;Wi-Fi&#x4F7F;&#x7528;&#x8BF4;&#x660E;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+</code></pre>
+<p>&#x5728;app.vue&#x4E2D;&#x5BFC;&#x5165;&#x7EC4;&#x4EF6;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> WifiView <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/wifi.vue&apos;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  components: {
+    WifiView,
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x4FEE;&#x6539;app.vue&#x4E2D;&#x7684;tab3&#x5185;&#x5BB9;&#x4E3A;wifi.vue&#x7EC4;&#x4EF6;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">f7-tab</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;tab3&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">wifi-view</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">wifi-view</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">f7-tab</span>&gt;</span>
+</code></pre>
+<p>&#x9875;&#x9762;&#x6548;&#x679C;&#x5982;&#x4E0B;</p>
+<p><img src="images/step2-1.png" alt="PNG"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="step1.html" class="navigation navigation-prev " aria-label="Previous page: 基本框架">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="step3.html" class="navigation navigation-next " aria-label="Next page: 重新规划单页组件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"添加单页组件","level":"1.4","depth":1,"next":{"title":"重新规划单页组件","level":"1.5","depth":1,"path":"step3.md","ref":"step3.md","articles":[]},"previous":{"title":"基本框架","level":"1.3","depth":1,"path":"step1.md","ref":"step1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"step2.md","mtime":"2017-05-09T09:27:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-12T06:40:56.365Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
