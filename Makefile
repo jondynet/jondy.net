@@ -16,6 +16,10 @@ SSH_USER=root
 BLOG_TARGET_DIR=/home/www/jondy.net/output
 BOOKS_TARGET_DIR=/home/www/jondy.net/books
 
+FTP_HOST=bxu2713750120.my3w.com
+FTP_USER=bxu2713750120
+FTP_TARGET_DIR=/htdocs
+
 help:
 	@echo 'Makefile for a pelican Web site                                           '
 	@echo '                                                                          '
@@ -24,6 +28,7 @@ help:
 	@echo '   make regenerate                     regenerate files upon modification '
 	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000'
 	@echo '   make upload                         upload the web site via rsync+ssh  '
+	@echo '   make ftp_upload                     upload the web site via FTP        '
 	@echo '                                                                          '
 
 html:
@@ -46,5 +51,8 @@ upload:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) -t $(THEMEDIR) $(PELICANOPTS)
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(BLOG_TARGET_DIR) --cvs-exclude
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete $(BOOKSDIR)/ $(SSH_USER)@$(SSH_HOST):$(BOOKS_TARGET_DIR) --cvs-exclude
+
+ftp_upload: html
+	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
 
 .PHONY: html help clean regenerate serve rsync_upload 
