@@ -1,4 +1,4 @@
-Title: Kali2017升级node.js v8.x
+Title: Kali2017升级node.js v8.x安装chrome谷歌浏览器
 Date: 2017-06-26 17:34
 Category: Kali
 Tags: debian,Kali,nodejs
@@ -18,6 +18,38 @@ apt-get install -y nodejs
 
 修改setup_后边的版本号即可升级到任意版本
 
+## 创建一个用户帐号,设置密码，添加到sudo组，修改sh为bash
+
+```
+# useradd -m kali
+# passwd kali
+# usermod -a -G sudo kali
+# chsh -s /bin/bash kali
+```
+
+## 装个谷歌浏览器 
+
+下载最新版本的chrome 64位的
+```
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+```
+
+安装gdebi， 这个会帮助我们自动安装相应的依赖。
+
+```
+# apt-get install gdebi
+```
+
+安装刚才下载的谷歌浏览器安装包
+
+```
+# gdebi google-chrome-stable_current_amd64.deb
+```
+退出当前root帐号，用kali帐号登录，启动谷歌浏览器试试
+
+```
+$ google-chrome
+```
 
 附上Kali 2017升级nodejs到8.x的升级log 
 
