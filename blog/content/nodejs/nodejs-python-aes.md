@@ -1,8 +1,8 @@
 Title: nodejs和python接口aes加密的方式
 Date: 2017-07-28 10:10
-Modified: 2017-07-28 11:11:56
+Modified: 2017-07-28 14:02:46
 Category: Python, nodejs
-Tags: tags
+Tags: AES
 Slug: nodejs-python-aes
 Authors: zhangdi
 Summary: nodejs和python接口aes加密的代码记录

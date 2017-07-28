@@ -25,6 +25,7 @@ help:
 	@echo '                                                                          '
 	@echo 'Usage:                                                                    '
 	@echo '   make clean                          remove the generated files         '
+	@echo '   make html                           generated files                    '
 	@echo '   make regenerate                     regenerate files upon modification '
 	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000'
 	@echo '   make upload                         upload the web site via rsync+ssh  '
