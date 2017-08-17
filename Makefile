@@ -27,6 +27,7 @@ help:
 	@echo '   make clean                          remove the generated files         '
 	@echo '   make html                           generated files                    '
 	@echo '   make regenerate                     regenerate files upon modification '
+	@echo '   make dev [PORT=8000]                start/restart develop_server.sh    '
 	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000'
 	@echo '   make upload                         upload the web site via rsync+ssh  '
 	@echo '   make ftp_upload                     upload the web site via FTP        '
@@ -37,6 +38,13 @@ html:
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
+
+dev:
+ifdef PORT
+	$(BASEDIR)/conf/pelicanconf/develop_server.sh restart $(PORT)
+else
+	$(BASEDIR)/conf/pelicanconf/develop_server.sh restart
+endif
 
 regenerate:
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) -t $(THEMEDIR) $(PELICANOPTS)

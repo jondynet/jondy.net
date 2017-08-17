@@ -5,3 +5,5 @@ autocmd BufRead *.less map <F1> :make<cr>
 autocmd BufRead *.css map <F1> :make<cr>
 autocmd BufRead *.py map <F1> :!time python %<cr>
 autocmd BufRead *.pyw map <F1> :!python %<cr>
+
+iab xtime <c-r>=strftime("%Y-%m-%d %H:%M:%S")
