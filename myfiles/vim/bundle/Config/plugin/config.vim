@@ -1,7 +1,41 @@
+" 设置字体 以及中文支持
+if has("win32")
+    set guifont=Inconsolata:h12:cANSI
+    source $VIMRUNTIME/mswin.vim
+    behave mswin
+endif
+
+if has("gui_running")
+    "au GUIEnter * simalt ~x " 窗口启动时自动最大化
+    set guioptions-=m " 隐藏菜单栏
+    set guioptions-=T " 隐藏工具栏
+    set guioptions-=L " 隐藏左侧滚动条
+    set guioptions-=r " 隐藏右侧滚动条
+    set guioptions-=b " 隐藏底部滚动条
+    "set showtabline=0 " 隐藏Tab栏
+endif
+
+" 配置多语言环境
+if has("multi_byte")
+" UTF-8 编码
+    set encoding=utf-8
+    set termencoding=utf-8
+    set formatoptions+=mM
+    set fencs=utf-8,gbk
+endif
+
+if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)'
+    set ambiwidth=double
+endif
+
+syntax on
+
 " 色彩主题
 colo pablo
 if $TERM == "xterm-256color"
   set t_Co=256 " 256 色
+else
+  colorscheme desert
 endif
 
 " 关闭兼容模式
